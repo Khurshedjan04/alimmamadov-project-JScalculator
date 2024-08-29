@@ -51,10 +51,15 @@ window.addEventListener("click", (e) => {
   } else if (target == "=" && shadow.innerHTML != "") {
     if (shadow.innerHTML.includes("+")) {
       mirror.innerHTML = previousNumber + parseFloat(mirror.innerHTML);
-    } else if (shadow.innerHTML.includes("-")) {
+    } else if (shadow.innerHTML.slice(-1) == "-") {
       mirror.innerHTML = previousNumber - parseFloat(mirror.innerHTML);
     } else if (shadow.innerHTML.includes("*")) {
+      console.log(parseFloat(mirror.innerHTML));
       mirror.innerHTML = previousNumber * parseFloat(mirror.innerHTML);
+      console.log(previousNumber);
+      console.log(mirror.innerHTML);
+      
+      
     } else if (shadow.innerHTML.includes("/")) {
       if (mirror.innerHTML == "0") {
         alert("Cannot divide to 0");
