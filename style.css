@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  perspective: 1000px;
+}
+header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h1 {
+  font-size: 30px;
+  padding: 30px 10px;
+}
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .cal_frame {
+  width: 300px;
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #030425;
+}
+main .mirror {
+  transform: rotate3d(1, 0, 0, 30deg);
+  border: 1px solid black;
+  width: 280px;
+  overflow: hidden;
+  color: #3c606d;
+  background-image: linear-gradient(to top,#e6e6e6, #dad9d9);
+}
+main .mirrir_frame {
+  background-image: linear-gradient(to top,#030425, #000);
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+
+}
+main .cal_frame .cal_mirr_shad {
+  width: 280px;
+  height: 50px;
+  text-align: right;
+  padding: 10px 20px 0 0;
+}
+main .cal_frame .cal_mirr {
+  width: 280px;
+  height: 100px;
+  text-align: right;
+  padding: 10px 20px 0 0;
+  font-size: 30px;
+}
+main .cal_frame .cal_input {
+  width: 300px;
+  background-color: #030425;
+  height: 350px;
+  border: 1px solid black;
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  border-radius: 10px;
+}
+main .cal_frame .cal_input div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: copy;
+}
+main .cal_frame .cal_input #n {
+background-color: #3c606d;
+color: #b1c0c2;
+}
+main .cal_frame .cal_input #a {
+background-color: #b1c0c2;
+color: #3c606d;
+}
+main .cal_frame .cal_input #e {
+background-color: #da2727;
+}
